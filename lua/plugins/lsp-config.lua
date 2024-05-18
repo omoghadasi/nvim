@@ -14,8 +14,6 @@ return {
                     "tsserver",
                     "bashls",
                     "cssls",
-                    "eslint",
-                    "emmet_ls",
                     "html",
                     "jsonls",
                     "intelephense",
