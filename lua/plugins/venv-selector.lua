@@ -4,8 +4,8 @@ return {
     config = function()
         require('venv-selector').setup {
             -- Your options go here
-            -- name = "venv",
-            -- auto_refresh = false
+            name = "venv",
+            auto_refresh = true
         }
     end,
     event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
