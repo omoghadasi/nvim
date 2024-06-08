@@ -11,6 +11,7 @@ return {
             close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
             enable_git_status = true,
             enable_diagnostics = true,
+            filesystem = { follow_current_file = { enabled = true } }
         })
         vim.keymap.set("n", "<C-E>", ":Neotree filesystem reveal left toggle<CR>")
     end,
