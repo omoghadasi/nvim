@@ -14,7 +14,9 @@ return {
                 null_ls.builtins.formatting.isort,
                 null_ls.builtins.formatting.xmllint,
                 null_ls.builtins.diagnostics.codespell,
-                null_ls.builtins.diagnostics.pylint
+                null_ls.builtins.diagnostics.pylint,
+                null_ls.builtins.formatting.phpcsfixer,
+                null_ls.builtins.diagnostics.phpcs,
             },
         })
         vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "formatting current file" })
