@@ -11,8 +11,17 @@ return {
         config = function()
             local builtin = require("telescope.builtin")
             local project_actions = require("telescope._extensions.project.actions")
+            local lga_actions = require("telescope-live-grep-args.actions")
             require("telescope").setup({
                 extensions = {
+                    live_grep_args = {
+                        mappings = { -- extend mappings
+                            i = {
+                                ["<C-k>"] = lga_actions.quote_prompt(),
+                                ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+                            },
+                        },
+                    },
                     project = {
                         hidden_files = true, -- default: false
                         theme = "dropdown",
@@ -30,12 +39,11 @@ return {
             require("telescope").load_extension("file_browser")
             require("telescope").load_extension("project")
             vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-            vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
             vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
             vim.keymap.set(
                 "n",
-                "<leader>fs",
+                "<leader>fg",
                 ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>"
             )
             vim.keymap.set("n", "<leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
