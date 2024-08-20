@@ -22,6 +22,7 @@ return {
                     "tailwindcss",
                     "lemminx",
                 },
+                automatic_setup = true,
             })
         end,
     },
