@@ -37,7 +37,10 @@ return {
                 settings = {
                     python = {
                         analysis = {
-                            extraPaths = { "/home/omid/project/markazeahan-odoo" }
+                            autoSearchPaths = true,                                 -- به طور خودکار مسیرها را جستجو می‌کند
+                            useLibraryCodeForTypes = true,                          -- برای استفاده از کد کتابخانه‌ها
+                            diagnosticMode = 'workspace',                           -- خطاها را در سطح workspace بررسی می‌کند
+                            typeCheckingMode = 'basic',                             -- سطح بررسی نوع پایه
                         }
                     }
                 }
