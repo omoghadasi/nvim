@@ -37,6 +37,7 @@ return {
                 settings = {
                     python = {
                         analysis = {
+                            memoryLimit = 10240,
                             autoSearchPaths = true,                                 -- به طور خودکار مسیرها را جستجو می‌کند
                             useLibraryCodeForTypes = true,                          -- برای استفاده از کد کتابخانه‌ها
                             diagnosticMode = 'workspace',                           -- خطاها را در سطح workspace بررسی می‌کند
