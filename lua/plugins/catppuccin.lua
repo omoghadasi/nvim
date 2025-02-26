@@ -62,6 +62,12 @@ return {
                         ["@lsp.type.interface"] = {
                             fg = colors.yellow,
                         },
+                        ["@tag.builtin.tsx"] = {
+                            fg = colors.red,
+                        },
+                        ["@tag.attribute.tsx"] = {
+                            fg = colors.yellow,
+                        },
                         -- تنظیمات مربوط به Neo-tree
                         NeoTreeCursorLine = { bg = colors.surface1 }, -- پس‌زمینه آیتم انتخابی
                         NeoTreeNormal = { bg = colors.mantle }, -- پس‌زمینه کلی
