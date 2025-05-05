@@ -7,7 +7,16 @@ return {
 	end,
 	opts = {
       spec = {
-        { "<leader>a", group = "ai" },
+        { "<leader>a", group = "AI" },
+        { "<leader>b", group = "Buffer Ordering" },
+        { "<leader>f", group = "Find Everything" },
+        { "<leader>ff", group = "Find File" },
+        { "<leader>fh", group = "Find Help" },
+        { "<leader>k", group = "Keymap Finding" },
+        { "<leader>s", group = "Search in File" },
+        { "<leader>v", group = "Python Venv" },
+        { "<leader>x", group = "Trouble Show" },
+        { "<leader><leader>", group = "Go to" },
       },
 		-- your configuration comes here
 		-- or leave it empty to use the default settings

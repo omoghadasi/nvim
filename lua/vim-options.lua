@@ -11,13 +11,4 @@ vim.keymap.set("n", "<A-j>", ":m +1<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", ":m -2<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
-vim.keymap.set("i", "kj", "<Esc>", {})
-vim.diagnostic.config({
-  virtual_text = {
-    spacing = 2,
-  },
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
-})
+vim.keymap.set("i", "jj", "<Esc>", {})
