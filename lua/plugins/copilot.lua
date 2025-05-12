@@ -26,7 +26,7 @@ return {
     build = "make tiktoken",                       -- Only on MacOS or Linux
     opts = {
       window = {
-        width = 0.4,        -- fractional width of parent, or absolute width in columns when > 1
+        width = 0.3,        -- fractional width of parent, or absolute width in columns when > 1
         height = 1,       -- fractional height of parent, or absolute height in rows when > 1
       },
       model = "claude-3.5-sonnet",
