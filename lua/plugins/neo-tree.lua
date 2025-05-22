@@ -23,7 +23,7 @@ return {
 				statusline = true,
 			},
 		})
-		-- vim.keymap.set("n", "<C-E>", ":Neotree filesystem reveal left toggle<CR>")
-		vim.keymap.set("n", "<C-E>", ":Neotree focus<CR>",{ noremap = true, silent = true })
+		vim.keymap.set("n", "<C-E>", ":Neotree filesystem reveal left toggle<CR>")
+		-- vim.keymap.set("n", "<C-E>", ":Neotree focus<CR>",{ noremap = true, silent = true })
 	end,
 }
