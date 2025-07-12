@@ -46,6 +46,7 @@ return {
 			require("telescope").load_extension("live_grep_args")
 			require("telescope").load_extension("file_browser")
 			require("telescope").load_extension("project")
+			require("telescope").load_extension("macros")
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
@@ -55,6 +56,12 @@ return {
 			end, { desc = "Live Grep with clipboard content" })
 			vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>")
 			vim.api.nvim_set_keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>fm",
+				":Telescope macros<CR>",
+				{ noremap = true, silent = true, desc = "Find Macros" }
+			)
 		end,
 	},
 	{
