@@ -49,12 +49,12 @@ return {
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>fg", function()
 				builtin.live_grep({ default_text = vim.fn.getreg("+") })
 			end, { desc = "Live Grep with clipboard content" })
-			vim.keymap.set("n", "<leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 			vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>")
-			vim.api.nvim_set_keymap("n", "<leader>km", ":Telescope keymaps<CR>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { noremap = true, silent = true })
 		end,
 	},
 	{
