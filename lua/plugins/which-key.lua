@@ -16,6 +16,7 @@ return {
         { "<leader>s", group = "Search in File" },
         { "<leader>v", group = "Python Venv" },
         { "<leader>x", group = "Trouble Show" },
+        { "<leader>t", group = "Toggle Option" },
         { "<leader><leader>", group = "Go to" },
       },
 		-- your configuration comes here
