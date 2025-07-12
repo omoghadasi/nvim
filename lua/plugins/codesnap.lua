@@ -10,6 +10,6 @@ return {
 		has_breadcrumbs = true,
 		bg_theme = "grape",
     has_line_numbers = true,
-    watermarck = "omid moghadasi"
+    watermark = "omid moghadasi"
 	},
 }
