@@ -24,6 +24,16 @@ return {
 				},
 				automatic_setup = true,
 			})
+			vim.diagnostic.config({
+				virtual_text = {
+					spacing = 2,
+          source = true
+				},
+				signs = true,
+				underline = false,
+				update_in_insert = true,
+        severity_sort = true
+			})
 		end,
 	},
 	{
