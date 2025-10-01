@@ -27,12 +27,12 @@ return {
 			vim.diagnostic.config({
 				virtual_text = {
 					spacing = 2,
-          source = true
+					source = true,
 				},
 				signs = true,
 				underline = false,
 				update_in_insert = true,
-        severity_sort = true
+				severity_sort = true,
 			})
 		end,
 	},
@@ -69,6 +69,7 @@ return {
 			vim.lsp.enable("cssls")
 			vim.lsp.enable("jsonls")
 			vim.lsp.enable("tailwindcss")
+			vim.lsp.enable("codebook")
 			vim.lsp.enable("pyright", {
 				settings = {
 					python = {

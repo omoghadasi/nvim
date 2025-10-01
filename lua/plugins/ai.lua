@@ -1,4 +1,18 @@
 return {
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {
+      -- 
+      suggestion = { enabled = true, auto_trigger = true },
+      panel = { enabled = true },
+    },
+    config = function(_, opts)
+      require("copilot").setup(opts)
+    end,
+  },
+  {
 	"yetone/avante.nvim",
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	-- ⚠️ must add this setting! ! !
@@ -22,6 +36,6 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		"nvim-tree/nvim-web-devicons",
-		"zbirenbaum/copilot.lua",
+    "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
 	},
-}
+}}
