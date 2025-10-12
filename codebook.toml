@@ -1,0 +1,8 @@
+words = [
+    "bufnr",
+    "iglob",
+    "lga",
+    "noice",
+    "noremap",
+    "require'telescope",
+]

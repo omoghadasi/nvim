@@ -53,7 +53,7 @@ return {
 			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>fg", function()
 				builtin.live_grep({})
-			end, { desc = "Live Grep with clipboard content" })
+			end, { desc = "Live Grep " })
 			vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>")
 			vim.api.nvim_set_keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { noremap = true, silent = true })
 			vim.api.nvim_set_keymap(
