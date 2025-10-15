@@ -9,7 +9,6 @@ return {
 			{ "<leader>gP", "<cmd>Git pull<cr>", desc = "Git Pull" },
 			{ "<leader>gb", "<cmd>Git blame<cr>", desc = "Git Blame" },
 			{ "<leader>gL", "<cmd>Git log<cr>", desc = "Git Log" },
-			{ "<leader>gD", "<cmd>Gvdiffsplit<cr>", desc = "Git Diff Split" },
 			{ "<leader>gw", "<cmd>Gwrite<cr>", desc = "Git Write (stage)" },
 			{ "<leader>gr", "<cmd>Gread<cr>", desc = "Git Read (checkout)" },
 		},
@@ -147,6 +146,38 @@ return {
 				wk.add({
 					{ "<leader>h", group = " Hunks", icon = "" },
 					{ "<leader>ht", group = " Toggle", icon = "" },
+				})
+			end
+		end,
+	},
+	{
+		"akinsho/git-conflict.nvim",
+		version = "*",
+		event = "BufReadPre",
+		config = function()
+			require("git-conflict").setup({
+				default_mappings = true, -- disable this if you want to use your own mappings
+				default_commands = true,
+				disable_diagnostics = true, -- خاموش کردن diagnostics در conflict
+				list_opener = "copen", -- command to open quickfix list
+				highlights = {
+					incoming = "DiffAdd",
+					current = "DiffText",
+				},
+			})
+
+			-- Integration با which-key
+			local wk_ok, wk = pcall(require, "which-key")
+			if wk_ok then
+				wk.add({
+					{ "<leader>c", group = "⚔️ Conflicts", icon = "" },
+					{ "<leader>co", "<cmd>GitConflictChooseOurs<cr>", desc = "Choose Ours" },
+					{ "<leader>ct", "<cmd>GitConflictChooseTheirs<cr>", desc = "Choose Theirs" },
+					{ "<leader>cb", "<cmd>GitConflictChooseBoth<cr>", desc = "Choose Both" },
+					{ "<leader>c0", "<cmd>GitConflictChooseNone<cr>", desc = "Choose None" },
+					{ "<leader>cn", "<cmd>GitConflictNextConflict<cr>", desc = "Next Conflict" },
+					{ "<leader>cp", "<cmd>GitConflictPrevConflict<cr>", desc = "Prev Conflict" },
+					{ "<leader>cl", "<cmd>GitConflictListQf<cr>", desc = "List Conflicts" },
 				})
 			end
 		end,
