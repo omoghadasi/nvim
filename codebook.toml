@@ -1,6 +1,12 @@
 words = [
+    "autocmd",
+    "autocmds",
     "bufnr",
+    "diffview",
+    "frecency",
     "iglob",
+    "itemgroup",
+    "keymap",
     "lga",
     "noice",
     "noremap",
