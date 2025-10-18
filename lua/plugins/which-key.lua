@@ -92,10 +92,6 @@ return {
 			{ "<leader>?", "<cmd>WhichKey<cr>", desc = "Show All Keymaps", icon = "󰋗" },
 			{ "<leader>k?", "<cmd>WhichKey<cr>", desc = "All Keymaps" },
 
-			-- مثال‌هایی از mappingهای معمول
-			{ "<leader>e", group = " Explorer", icon = "" },
-			{ "<leader>q", group = " Quit/Session", icon = "" },
-
 			-- گروه‌های با [] یا g
 			{ "[", group = " Previous" },
 			{ "]", group = " Next" },
